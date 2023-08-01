@@ -1,5 +1,5 @@
 //
-//  SchoolTableViewCell.swift
+//  CustomSchoolTableViewCell.swift
 //  SchoolDirectory
 //
 //  Created by raj on 7/31/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SchoolTableViewCell: UITableViewCell {
+class CustomSchoolTableViewCell: UITableViewCell {
 
     @IBOutlet weak var schoolName: UILabel!
     @IBOutlet weak var cityLbl: UILabel!

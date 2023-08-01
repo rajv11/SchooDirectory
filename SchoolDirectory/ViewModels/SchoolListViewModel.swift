@@ -64,6 +64,7 @@ class SchoolListViewModel {
         return schools[index]
     }
     
+    // Function to get a specific score of an school with dnb passed
     func findSchool(forDnb: String) -> ScoreModel? {
         if let scores = satScores, let result = scores.first(where: { $0.dbn == forDnb }) {
             return result

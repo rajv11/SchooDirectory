@@ -15,6 +15,8 @@ class SchoolService {
     private init() {}
     
     func fetchSchools(completion: @escaping (Result<[SchoolModel], Error>) -> Void) {
+        
+        // all urls and contstants can be placed in a Constants file, not doing it for now
         guard let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else {
             completion(.failure(NSError(domain: "Invalid URL", code: -1, userInfo: nil)))
             return

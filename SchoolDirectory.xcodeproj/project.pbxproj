@@ -12,7 +12,6 @@
 		3556FF5C2A78610300D78EF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3556FF5A2A78610300D78EF8 /* Main.storyboard */; };
 		3556FF5E2A78610600D78EF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3556FF5D2A78610600D78EF8 /* Assets.xcassets */; };
 		3556FF612A78610600D78EF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3556FF5F2A78610600D78EF8 /* LaunchScreen.storyboard */; };
-		3556FF692A78615D00D78EF8 /* SchoolListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FF682A78615D00D78EF8 /* SchoolListTableVC.swift */; };
 		3556FF6B2A7861DE00D78EF8 /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FF6A2A7861DE00D78EF8 /* SchoolModel.swift */; };
 		3556FF6D2A78662200D78EF8 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FF6C2A78662200D78EF8 /* SchoolTableViewCell.swift */; };
 		3556FF6F2A786DE200D78EF8 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FF6E2A786DE100D78EF8 /* ScoreModel.swift */; };
@@ -20,6 +19,8 @@
 		3556FF9C2A78876D00D78EF8 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FF9B2A78876D00D78EF8 /* NetworkManger.swift */; };
 		3556FF9E2A7887C900D78EF8 /* SchoolService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FF9D2A7887C900D78EF8 /* SchoolService.swift */; };
 		3556FFA02A78897F00D78EF8 /* SchoolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FF9F2A78897F00D78EF8 /* SchoolListViewModel.swift */; };
+		3556FFA72A789E6900D78EF8 /* CustomSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556FFA52A789E6900D78EF8 /* CustomSchoolTableViewCell.swift */; };
+		3556FFA82A789E6900D78EF8 /* CustomSchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3556FFA62A789E6900D78EF8 /* CustomSchoolTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,6 @@
 		3556FF5D2A78610600D78EF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3556FF602A78610600D78EF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3556FF622A78610600D78EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3556FF682A78615D00D78EF8 /* SchoolListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListTableVC.swift; sourceTree = "<group>"; };
 		3556FF6A2A7861DE00D78EF8 /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
 		3556FF6C2A78662200D78EF8 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		3556FF6E2A786DE100D78EF8 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		3556FF9B2A78876D00D78EF8 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		3556FF9D2A7887C900D78EF8 /* SchoolService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolService.swift; sourceTree = "<group>"; };
 		3556FF9F2A78897F00D78EF8 /* SchoolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewModel.swift; sourceTree = "<group>"; };
+		3556FFA52A789E6900D78EF8 /* CustomSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchoolTableViewCell.swift; sourceTree = "<group>"; };
+		3556FFA62A789E6900D78EF8 /* CustomSchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSchoolTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				3556FF6C2A78662200D78EF8 /* SchoolTableViewCell.swift */,
-				3556FF682A78615D00D78EF8 /* SchoolListTableVC.swift */,
 				3556FF702A78706600D78EF8 /* ScoresViewController.swift */,
+				3556FFA52A789E6900D78EF8 /* CustomSchoolTableViewCell.swift */,
+				3556FFA62A789E6900D78EF8 /* CustomSchoolTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				3556FF612A78610600D78EF8 /* LaunchScreen.storyboard in Resources */,
 				3556FF5E2A78610600D78EF8 /* Assets.xcassets in Resources */,
 				3556FF5C2A78610300D78EF8 /* Main.storyboard in Resources */,
+				3556FFA82A789E6900D78EF8 /* CustomSchoolTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +203,7 @@
 				3556FF6B2A7861DE00D78EF8 /* SchoolModel.swift in Sources */,
 				3556FF572A78610300D78EF8 /* SceneDelegate.swift in Sources */,
 				3556FF9C2A78876D00D78EF8 /* NetworkManger.swift in Sources */,
-				3556FF692A78615D00D78EF8 /* SchoolListTableVC.swift in Sources */,
+				3556FFA72A789E6900D78EF8 /* CustomSchoolTableViewCell.swift in Sources */,
 				3556FFA02A78897F00D78EF8 /* SchoolListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
