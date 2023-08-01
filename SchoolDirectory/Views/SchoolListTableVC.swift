@@ -84,12 +84,12 @@ extension SchoolListTableVC {
         
         let item = viewModel.school(at: indexPath.row)
         
-        cell.schoolName.text = item.schoolName ?? "N/A"
-        cell.cityLbl.text = item.city ?? "N/A"
-        cell.emailLbl.text = item.schoolEmail ?? "N/A"
-        cell.zipLbl.text = item.zip ?? "N/A"
-        cell.phoneNumberLbl.text = item.phoneNumber ?? "N/A"
-        cell.websiteLbl.text = item.website ?? "N/A"
+        cell.schoolName.text = "\(item.schoolName ?? "N/A")"
+        cell.cityLbl.text = "City: \(item.city ?? "N/A")"
+        cell.emailLbl.text = "Email: \(item.schoolEmail ?? "N/A")"
+        cell.zipLbl.text = "Zip: \(item.zip ?? "N/A")"
+        cell.phoneNumberLbl.text = "Contact: \(item.phoneNumber ?? "N/A")"
+        cell.websiteLbl.text = "Website: \(item.website ?? "N/A")"
         
         return cell
     }
