@@ -14,7 +14,8 @@ class SchoolListTableVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200 // Set an appropriate estimated row height
         // Register the custom cell .xib file for the custom cell class
             tableView.register(UINib(nibName: "CustomSchoolTableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
         
@@ -83,12 +84,12 @@ extension SchoolListTableVC {
         
         let item = viewModel.school(at: indexPath.row)
         
-        cell.schoolName.text = item.schoolName
-        cell.cityLbl.text = item.city
-        cell.emailLbl.text = item.schoolEmail
-        cell.zipLbl.text = item.zip
-        cell.phoneNumberLbl.text = item.phoneNumber
-        cell.websiteLbl.text = item.website
+        cell.schoolName.text = item.schoolName ?? "N/A"
+        cell.cityLbl.text = item.city ?? "N/A"
+        cell.emailLbl.text = item.schoolEmail ?? "N/A"
+        cell.zipLbl.text = item.zip ?? "N/A"
+        cell.phoneNumberLbl.text = item.phoneNumber ?? "N/A"
+        cell.websiteLbl.text = item.website ?? "N/A"
         
         return cell
     }
@@ -100,11 +101,6 @@ extension SchoolListTableVC {
         // #warning Incomplete implementation, return the number of rows
         return viewModel.numberOfSchools()
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Get the selected school from your data source (e.g., schoolsArray)
