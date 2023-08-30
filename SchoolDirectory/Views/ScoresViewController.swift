@@ -101,7 +101,6 @@ class ScoresViewController: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.text = school.schoolName ?? "N/A"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        titleLabel.textColor = .black
         
         // Assign the label to the navigation item's titleView
         navigationItem.titleView = titleLabel
