@@ -93,20 +93,30 @@ class ScoresViewController: UIViewController {
     // MARK: - Data Population
     private func populateData() {
         guard let school = selectedSchool else {
-                return
-            }
-            
-            let satReadingScore = satScores?.readingScore ?? "N/A"
-            let satMathScore = satScores?.mathScore ?? "N/A"
-            let satWritingScore = satScores?.writingScore ?? "N/A"
-            let overView = school.overViewParagraph ?? "No Overview Available"
-            let extracurricular = school.extracurricularActivities ?? "No Extracurricular Activities Available"
-            
-            readingScoreLabel.text = "Reading Score: \(satReadingScore)"
-            mathScoreLabel.text = "Math Score: \(satMathScore)"
-            writingScoreLabel.text = "Writing Score: \(satWritingScore)"
-            
-            overviewLabel.text = "Overview: \(overView)"
-            extracurricularLabel.text = "Extracurricular: : \(extracurricular)"
+            return
+        }
+        
+        let titleLabel = UILabel()
+        titleLabel.numberOfLines = 0 // Allow multiple lines
+        titleLabel.textAlignment = .center
+        titleLabel.text = school.schoolName ?? "N/A"
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        titleLabel.textColor = .black
+        
+        // Assign the label to the navigation item's titleView
+        navigationItem.titleView = titleLabel
+        
+        let satReadingScore = satScores?.readingScore ?? "N/A"
+        let satMathScore = satScores?.mathScore ?? "N/A"
+        let satWritingScore = satScores?.writingScore ?? "N/A"
+        let overView = school.overViewParagraph ?? "No Overview Available"
+        let extracurricular = school.extracurricularActivities ?? "No Extracurricular Activities Available"
+        
+        readingScoreLabel.text = "Reading Score: \(satReadingScore)"
+        mathScoreLabel.text = "Math Score: \(satMathScore)"
+        writingScoreLabel.text = "Writing Score: \(satWritingScore)"
+        
+        overviewLabel.text = "Overview: \(overView)"
+        extracurricularLabel.text = "Extracurricular: : \(extracurricular)"
     }
 }
