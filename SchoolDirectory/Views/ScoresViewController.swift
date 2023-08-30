@@ -58,7 +58,7 @@ class ScoresViewController: UIViewController {
     
     // MARK: - UI Setup
     private func setupUI() {
-        
+        view.backgroundColor = .systemBackground
         // Add the UI components to the view
         view.addSubview(readingScoreLabel)
         view.addSubview(mathScoreLabel)
